@@ -1,9 +1,10 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Pizza {
-    private ArrayList<Slice> slices = new ArrayList<>();
+    private List<Slice> slices = new ArrayList<>();
 
-    public ArrayList<Slice> getSlices() {
+    public List<Slice> getSlices() {
         return slices;
     }
 }
