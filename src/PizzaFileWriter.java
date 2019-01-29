@@ -14,7 +14,7 @@ public class PizzaFileWriter {
         this.pizza = pizza;
     }
 
-    public void generateOutput() throws IOException {
+    public void generateOutput(String filename) throws IOException {
 
         List<Slice> slices = pizza.getSlices();
 
@@ -26,7 +26,7 @@ public class PizzaFileWriter {
             fileData += row.x + " " + col.x + " " + row.y + " " + col.y + "\n";
         }
 
-        FileOutputStream fos = new FileOutputStream("output.txt");
+        FileOutputStream fos = new FileOutputStream("output" + filename + ".txt");
         fos.write(fileData.getBytes());
         fos.flush();
         fos.close();
