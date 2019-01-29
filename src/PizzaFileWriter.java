@@ -26,7 +26,7 @@ public class PizzaFileWriter {
             fileData += row.x + " " + col.x + " " + row.y + " " + col.y + "\n";
         }
 
-        FileOutputStream fos = new FileOutputStream("output" + filename + ".txt");
+        FileOutputStream fos = new FileOutputStream("output_" + filename + ".txt");
         fos.write(fileData.getBytes());
         fos.flush();
         fos.close();
