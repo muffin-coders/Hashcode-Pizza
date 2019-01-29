@@ -6,13 +6,8 @@ public class InputReader {
     private int rows, cols, minNrOfIngredient, maxNrOfCells;
     private char[][] ingrediants;
 
-
-    public InputReader(Pizza pizza) {
-        this.pizza = new Pizza(rows, cols, minNrOfIngredient, maxNrOfCells, ingrediants);
-        read();
-    }
-
-    private void read() {
+    public Pizza read() {
+        pizza = new Pizza(rows, cols, minNrOfIngredient, maxNrOfCells, ingrediants);
         int rowCounter = 0;
         try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(new File("res/b_small.in"))))) {
             String line;
@@ -30,6 +25,8 @@ public class InputReader {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        return pizza;
     }
 
     private void addIngrediants(String line, int rowCounter) {

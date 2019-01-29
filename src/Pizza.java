@@ -16,6 +16,7 @@ public class Pizza {
         this.cols = cols;
         this.minNrOfIngredient = minNrOfIngredient;
         this.maxNrOfCells = maxNrOfCells;
+        this.ingrediants = ingrediants;
     }
 
     public int getRows() {

@@ -1,9 +1,10 @@
+import java.io.IOException;
+
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         // Call Input Reader
-        Pizza pizza = null;
-        new InputReader(pizza);
+        Pizza pizza = (new InputReader()).read();
 
         // Pizza Slicing
         PizzaSlicer pizzaSlicer = new StupidPizzaSlicer();
@@ -11,5 +12,6 @@ public class Main {
         pizzaSlicer.cutPizza(pizza);
 
         // Call output writer
+        (new PizzaFileWriter(pizza)).generateOutput();
     }
 }
