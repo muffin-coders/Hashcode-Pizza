@@ -1,18 +1,19 @@
 import java.io.*;
 
 public class InputReader {
+    private final String file;
     private Pizza pizza;
     private boolean isFistline = true;
     private int rows, cols, minNrOfIngredient, maxNrOfCells;
     private char[][] ingrediants;
 
     public InputReader(String file) {
-
+        this.file = file;
     }
 
     public Pizza read() {
         int rowCounter = 0;
-        try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(new File("res/b_small.in"))))) {
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(new File("res/" + file))))) {
             String line;
             while ((line = br.readLine()) != null) {
                 if (isFistline) {

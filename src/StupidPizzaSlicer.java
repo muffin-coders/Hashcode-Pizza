@@ -26,6 +26,9 @@ public class StupidPizzaSlicer implements PizzaSlicer {
                     pizza.addSlice(new Point(sliceStartRow, row), new Point(sliceStartCol, col));
                     reset(row, col);
                 }
+//                if (maxNrOfCells <= (countTomato + countMushroom + 1)) {
+//                    reset(row, col);
+//                }
             }
         }
     }
