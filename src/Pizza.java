@@ -4,6 +4,7 @@ import java.util.List;
 public class Pizza {
     private int rows, cols, minNrOfIngredient, maxNrOfCells;
     private List<Slice> slices = new ArrayList<>();
+    private char[][] ingrediants;
 
     public List<Slice> getSlices() {
         return slices;
@@ -30,6 +31,10 @@ public class Pizza {
 
     public int getMaxNrOfCells() {
         return maxNrOfCells;
+    }
+
+    public char[][] getIngrediants() {
+        return ingrediants;
     }
 }
 
