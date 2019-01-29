@@ -7,8 +7,8 @@ public class InputReader {
     private char[][] ingrediants;
 
 
-    public InputReader() {
-        pizza = new Pizza(rows, cols, minNrOfIngredient, maxNrOfCells, ingrediants);
+    public InputReader(Pizza pizza) {
+        this.pizza = new Pizza(rows, cols, minNrOfIngredient, maxNrOfCells, ingrediants);
         read();
     }
 

@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,6 +36,10 @@ public class Pizza {
 
     public char[][] getIngrediants() {
         return ingrediants;
+    }
+
+    public void addSlice(Point rows, Point columns) {
+        slices.add(new Slice(rows, columns));
     }
 }
 
