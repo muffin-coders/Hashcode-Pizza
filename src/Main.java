@@ -3,7 +3,7 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        String[] files = {"b_small.in"};
+        String[] files = {"a_example.in", "b_small.in", "c_medium.in", "d_big.in"};
 
         for (int i = 0; i < files.length; i++) {
             InputReader inputReader = new InputReader(files[i]);

@@ -15,10 +15,10 @@ public class InputReader {
         try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(new File("res/b_small.in"))))) {
             String line;
             while ((line = br.readLine()) != null) {
-                if(isFistline) {
+                if (isFistline) {
                     createPizza(line);
                     isFistline = false;
-                } else{
+                } else {
                     addIngrediants(line, rowCounter);
                     rowCounter++;
                 }
@@ -33,7 +33,7 @@ public class InputReader {
     }
 
     private void addIngrediants(String line, int rowCounter) {
-        for(int i =0; i < cols;i++){
+        for (int i = 0; i < cols; i++) {
             ingrediants[rowCounter][i] = line.charAt(i);
         }
     }
@@ -47,9 +47,9 @@ public class InputReader {
         ingrediants = new char[rows][cols];
     }
 
-    private void test(){
-        for(int i = 0; i < ingrediants.length; i++){
-            for(int j=0; j < ingrediants[0].length; j++){
+    private void test() {
+        for (int i = 0; i < ingrediants.length; i++) {
+            for (int j = 0; j < ingrediants[0].length; j++) {
                 System.out.print(ingrediants[i][j]);
             }
             System.out.println();

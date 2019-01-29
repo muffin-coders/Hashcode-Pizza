@@ -7,16 +7,16 @@ public class Pizza {
     private List<Slice> slices = new ArrayList<>();
     private char[][] ingrediants;
 
-    public List<Slice> getSlices() {
-        return slices;
-    }
-
     public Pizza(int rows, int cols, int minNrOfIngredient, int maxNrOfCells, char[][] ingrediants) {
         this.rows = rows;
         this.cols = cols;
         this.minNrOfIngredient = minNrOfIngredient;
         this.maxNrOfCells = maxNrOfCells;
         this.ingrediants = ingrediants;
+    }
+
+    public List<Slice> getSlices() {
+        return slices;
     }
 
     public int getRows() {
