@@ -7,14 +7,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PizzaFileWriter {
+    private String filename;
 
-    private Pizza pizza;
-
-    public PizzaFileWriter(Pizza pizza) {
-        this.pizza = pizza;
+    public PizzaFileWriter(String filename) {
+        this.filename = filename;
     }
 
-    public void generateOutput(String filename) throws IOException {
+    public void generateOutput(Pizza pizza) throws IOException {
 
         List<Slice> slices = pizza.getSlices();
 
