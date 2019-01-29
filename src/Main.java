@@ -7,6 +7,7 @@ public class Main {
         PizzaSlicer pizzaSlicerStrategie = new PicesPizzaSlicer();
 
         for (String file : files) {
+            System.out.println("Input " + file);
             InputReader inputReader = new InputReader(file);
             PizzaFileWriter pizzaFileWriter =
                     new PizzaFileWriter(pizzaSlicerStrategie.getClass().getName() + "_" + file);
