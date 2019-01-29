@@ -3,8 +3,8 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        String[] files = {"a_example.in", "b_small.in", "c_medium.in", "d_big.in"};
-        PizzaSlicer pizzaSlicerStrategie = new StupidPizzaSlicer();
+        String[] files = {"a_example.in", "b_small.in", "c_medium.in", "d_big.in"}; //, "b_small.in", "c_medium.in", "d_big.in"
+        PizzaSlicer pizzaSlicerStrategie = new PicesPizzaSlicer();
 
         for (String file : files) {
             InputReader inputReader = new InputReader(file);
