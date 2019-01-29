@@ -1,3 +1,3 @@
-public class PizzaSlicer {
-    
+public interface PizzaSlicer {
+    void cutPizza(Pizza pizza);
 }

@@ -3,24 +3,27 @@ import java.io.*;
 public class InputReader {
     private Pizza pizza;
     private boolean isFistline = true;
-    private int rows, cols, maxNrOfIngredient, maxNrOfCells;
+    private int rows, cols, minNrOfIngredient, maxNrOfCells;
+    private char[][] ingrediants;
 
 
-    public InputReader() {
-        pizza = new Pizza();
+    public InputReader(Pizza pizza) {
+        this.pizza = new Pizza(rows, cols, minNrOfIngredient, maxNrOfCells, ingrediants);
         read();
     }
 
-
     private void read() {
-        try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(new File("b_small.in"))))) {
+        int rowCounter = 0;
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(new File("res/b_small.in"))))) {
             String line;
             while ((line = br.readLine()) != null) {
-
-                if(isFistline){
+                if(isFistline) {
                     createPizza(line);
+                    isFistline = false;
+                } else{
+                    addIngrediants(line, rowCounter);
+                    rowCounter++;
                 }
-                isFistline = false;
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -29,17 +32,27 @@ public class InputReader {
         }
     }
 
+    private void addIngrediants(String line, int rowCounter) {
+        for(int i =0; i < cols;i++){
+            ingrediants[rowCounter][i] = line.charAt(i);
+        }
+    }
+
     private void createPizza(String line) {
         String[] firstLine = line.split(" ");
         rows = Integer.parseInt(firstLine[0]);
         cols = Integer.parseInt(firstLine[1]);
-        maxNrOfIngredient = Integer.parseInt(firstLine[2]);
+        minNrOfIngredient = Integer.parseInt(firstLine[2]);
         maxNrOfCells = Integer.parseInt(firstLine[3]);
-
+        ingrediants = new char[rows][cols];
     }
 
-
-    public static void main(String[] args) {
-        new InputReader();
+    private void test(){
+        for(int i = 0; i < ingrediants.length; i++){
+            for(int j=0; j < ingrediants[0].length; j++){
+                System.out.print(ingrediants[i][j]);
+            }
+            System.out.println();
+        }
     }
 }
