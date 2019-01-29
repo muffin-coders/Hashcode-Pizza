@@ -8,7 +8,6 @@ public class StupidPizzaSlicer implements PizzaSlicer {
     }
 
     public void cutPizza(Pizza pizza) {
-
         int maxNrOfCells = pizza.getMaxNrOfCells();
         int minNrOfIngredient = pizza.getMinNrOfIngredient();
         char[][] ingredient = pizza.getIngrediants();
