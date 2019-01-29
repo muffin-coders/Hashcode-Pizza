@@ -1,9 +1,9 @@
 public class InputReader {
-    private Pizza pizza:
+    private Pizza pizza;
 
 
     public InputReader() {
-        pizza new Pizza();
+        pizza = new Pizza();
     }
 
 
