@@ -10,7 +10,7 @@ public class Pizza {
         return slices;
     }
 
-    public Pizza(int rows, int cols, int minNrOfIngredient, int maxNrOfCells) {
+    public Pizza(int rows, int cols, int minNrOfIngredient, int maxNrOfCells, char[][] ingrediants) {
         this.rows = rows;
         this.cols = cols;
         this.minNrOfIngredient = minNrOfIngredient;
