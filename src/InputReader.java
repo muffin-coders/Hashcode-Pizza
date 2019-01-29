@@ -3,7 +3,7 @@ import java.io.*;
 public class InputReader {
     private Pizza pizza;
     private boolean isFistline = true;
-    private int rows, cols, maxNrOfIngredient, maxNrOfCells;
+    private int rows, cols, minxNrOfIngredient, maxNrOfCells;
 
 
     public InputReader() {
@@ -33,7 +33,7 @@ public class InputReader {
         String[] firstLine = line.split(" ");
         rows = Integer.parseInt(firstLine[0]);
         cols = Integer.parseInt(firstLine[1]);
-        maxNrOfIngredient = Integer.parseInt(firstLine[2]);
+        minxNrOfIngredient = Integer.parseInt(firstLine[2]);
         maxNrOfCells = Integer.parseInt(firstLine[3]);
 
     }
